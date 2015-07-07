@@ -39,10 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contracts\ILoadedAssembly.cs" />
     <Compile Include="Contracts\IModuleManager.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Models\LoadedAssembly.cs" />
+    <Compile Include="Models\ModuleWrapper.cs" />
     <Compile Include="ModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicModuleLoader.Common\DynamicModuleLoader.Common.csproj">
+      <Project>{9e9f0139-78c9-4fcd-ac64-5734c1252d17}</Project>
+      <Name>DynamicModuleLoader.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
