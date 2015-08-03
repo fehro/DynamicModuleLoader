@@ -10,8 +10,6 @@ namespace DynamicModuleLoader.Core.Contracts
     {
         string FileName { get; set; }
 
-        DateTime ModifiedOn { get; set; }
-
-        List<string> ModuleAssemblyTypes { get; set; } 
+        List<Type> ModuleTypes { get; set; } 
     }
 }

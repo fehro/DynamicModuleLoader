@@ -14,9 +14,16 @@ namespace DynamicModuleLoader.Core.Models
 
         public string FileName { get; set; }
 
-        public DateTime ModifiedOn { get; set; }
+        public List<Type> ModuleTypes { get; set; }
 
-        public List<string> ModuleAssemblyTypes { get; set; }
+        #endregion
+
+        #region Constructor
+
+        public LoadedAssembly()
+        {
+            ModuleTypes = new List<Type>();
+        }
 
         #endregion
     }

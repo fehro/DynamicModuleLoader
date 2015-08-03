@@ -42,8 +42,11 @@
     <Compile Include="Contracts\ILoadedAssembly.cs" />
     <Compile Include="Contracts\IModuleManager.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="Infrastructure\AssemblyManager.cs" />
+    <Compile Include="Infrastructure\DirectoryScanner.cs" />
+    <Compile Include="Infrastructure\EventEmitter.cs" />
     <Compile Include="Models\LoadedAssembly.cs" />
-    <Compile Include="Models\ModuleWrapper.cs" />
+    <Compile Include="Infrastructure\AssemblyLoader.cs" />
     <Compile Include="ModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
