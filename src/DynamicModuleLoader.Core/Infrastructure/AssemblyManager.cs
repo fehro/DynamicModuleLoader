@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
-using System.Timers;
 using DynamicModuleLoader.Core.Contracts;
 
 namespace DynamicModuleLoader.Core.Infrastructure
