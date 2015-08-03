@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DynamicModuleLoader.Core.Contracts
 {
-    public interface ILoadedAssembly
+    interface ILoadedAssembly
     {
         string FileName { get; set; }
 

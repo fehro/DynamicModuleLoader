@@ -4,7 +4,7 @@ using DynamicModuleLoader.Core.Contracts;
 
 namespace DynamicModuleLoader.Core.Models
 {
-    public class LoadedAssembly : ILoadedAssembly
+    internal class LoadedAssembly : ILoadedAssembly
     {
         #region Implemented ILoadedAssembly Members
 

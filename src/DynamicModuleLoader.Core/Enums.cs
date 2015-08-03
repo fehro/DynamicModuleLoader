@@ -1,6 +1,6 @@
 ﻿namespace DynamicModuleLoader.Core
 {
-    public class Enums
+    internal class Enums
     {
         public enum AppSettingKeys
         {
