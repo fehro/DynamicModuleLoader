@@ -41,7 +41,6 @@
   <ItemGroup>
     <Compile Include="Contracts\ILoadedAssembly.cs" />
     <Compile Include="Contracts\IModuleManager.cs" />
-    <Compile Include="Enums.cs" />
     <Compile Include="Infrastructure\AssemblyManager.cs" />
     <Compile Include="Infrastructure\DirectoryScanner.cs" />
     <Compile Include="Infrastructure\EventEmitter.cs" />
@@ -57,7 +56,6 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  
   <UsingTask TaskName="ILMerge.MSBuild.Tasks.ILMerge" AssemblyFile="$(SolutionDir)\packages\ILMerge.MSBuild.Tasks.1.0.0.3\tools\ILMerge.MSBuild.Tasks.dll" />
   <Target Name="AfterBuild">
     <ItemGroup>
@@ -70,5 +68,4 @@
     <Message Text="ILMerge @(MergeAsm) -&gt; $(MergedAssembly)" Importance="high" />
     <ILMerge InputAssemblies="@(MergeAsm)" OutputFile="$(MergedAssembly)" TargetKind="SameAsPrimaryAssembly" />
   </Target>
-  
 </Project>

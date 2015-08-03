@@ -2,5 +2,6 @@
 {
     public interface IModule
     {
+        void Tick();
     }
 }

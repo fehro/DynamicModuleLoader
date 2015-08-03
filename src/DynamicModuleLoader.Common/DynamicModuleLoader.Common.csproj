@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\ModuleControl.cs" />
     <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="Contracts\IModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
