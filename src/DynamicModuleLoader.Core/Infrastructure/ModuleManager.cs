@@ -5,7 +5,7 @@ using DynamicModuleLoader.Core.Contracts;
 
 namespace DynamicModuleLoader.Core.Infrastructure
 {
-    internal class ModuleManager: LoggableClass
+    internal class ModuleManager: LoggableBaseClass
     {
         #region Global Variables / Properties
 

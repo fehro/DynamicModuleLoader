@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
@@ -39,7 +40,7 @@
     <Compile Include="Contracts\IModule.cs" />
     <Compile Include="Delegates\Event.cs" />
     <Compile Include="Enums.cs" />
-    <Compile Include="Infrastructure\LoggableClass.cs" />
+    <Compile Include="Infrastructure\LoggableBaseClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -2,7 +2,7 @@
 
 namespace DynamicModuleLoader.Common.Infrastructure
 {
-    public class LoggableClass
+    public class LoggableBaseClass
     {
         #region Global Variables / Properties
 
@@ -12,7 +12,7 @@ namespace DynamicModuleLoader.Common.Infrastructure
 
         #region Constructor
 
-        public LoggableClass(ILogger logger)
+        public LoggableBaseClass(ILogger logger)
         {
             Logger = logger;
         }

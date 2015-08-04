@@ -10,7 +10,7 @@ using DynamicModuleLoader.Core.Infrastructure;
 
 namespace DynamicModuleLoader.Core
 {
-    public class AssemblyManager: LoggableClass, IAssemblyManager
+    public class AssemblyManager: LoggableBaseClass, IAssemblyManager
     {
         #region Global Variables / Properties
 
