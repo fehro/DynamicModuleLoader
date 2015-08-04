@@ -84,7 +84,13 @@ namespace DynamicModuleLoader.Core.Infrastructure
         {
             try
             {
-                return Convert.ToInt32(ConfigurationManager.AppSettings[Enums.AppSettingKeys.DynamicModuleLoaderDirectoryScannerFrequencySeconds.ToString()]);
+                //Try to get the frequency from the config file.
+                var frequency = Convert.ToInt32(ConfigurationManager.AppSettings[Enums.AppSettingKeys.DynamicModuleLoaderDirectoryScannerFrequencySeconds.ToString()]);
+
+                //Ensure the frequency is greater than zero.
+                if (frequency == 0) throw new Exception("Frequency must be greater than zero");
+
+                return frequency;
             }
             catch (Exception ex)
             {
