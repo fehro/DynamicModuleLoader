@@ -1,25 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using DynamicModuleLoader.Common.Delegates;
 
 namespace DynamicModuleLoader.Core.Infrastructure
 {
-    internal class EventEmitter<TEventArgs>
+    internal class EventEmitter<T>
     {
         #region Global Variables / Properties
 
-        /// <summary>
-        /// Registered listeners.
-        /// </summary>
-        private readonly List<EventHandler<TEventArgs>> _listeners;
-
-        #endregion
-
-        #region Constructor
-
-        public EventEmitter()
-        {
-            _listeners = new List<EventHandler<TEventArgs>>();
-        }
+        public event Event<T> Listeners;
 
         #endregion
 
@@ -28,19 +17,20 @@ namespace DynamicModuleLoader.Core.Infrastructure
         /// <summary>
         /// Register a listener to listen for emitted events.
         /// </summary>
-        public void RegisterListener(EventHandler<TEventArgs> listener)
+        public void RegisterListener(Event<T> listener)
         {
-            _listeners.Add(listener);
+            Listeners += listener;
         }
 
         /// <summary>
         /// Emit an event to any registered listeners.
         /// </summary>
-        public void Emit(TEventArgs type)
+        public void Emit(T paramater)
         {
-            _listeners.ForEach(x => 
-                x.BeginInvoke(this, type, null, null)
-            );
+            //If there are no assigned listeners then just return.
+            if (Listeners == null) return;
+
+            Listeners.BeginInvoke(paramater, null, null);
         }
 
         #endregion

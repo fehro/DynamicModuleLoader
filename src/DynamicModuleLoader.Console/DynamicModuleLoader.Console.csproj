@@ -32,9 +32,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DynamicModuleLoader">
-      <HintPath>lib\DynamicModuleLoader.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,6 +49,20 @@
     <None Include="App.config">
       <SubType>Designer</SubType>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicModuleLoader.Common\DynamicModuleLoader.Common.csproj">
+      <Project>{9e9f0139-78c9-4fcd-ac64-5734c1252d17}</Project>
+      <Name>DynamicModuleLoader.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicModuleLoader.Core\DynamicModuleLoader.Core.csproj">
+      <Project>{4bd0ab40-ad3b-4c59-bf0f-6ffb1c166c7a}</Project>
+      <Name>DynamicModuleLoader.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DynamicModuleLoader.SampleModules\DynamicModuleLoader.SampleModules.csproj">
+      <Project>{558f26f5-4ab1-4ddb-bc67-b7389b362e20}</Project>
+      <Name>DynamicModuleLoader.SampleModules</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

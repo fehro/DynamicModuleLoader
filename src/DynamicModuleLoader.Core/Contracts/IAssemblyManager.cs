@@ -2,12 +2,12 @@
 
 namespace DynamicModuleLoader.Core.Contracts
 {
-    public interface IModuleManager
+    public interface IAssemblyManager
     {
         void Start();
 
         void Stop();
 
-        void RegisterOnModuleAddedListener(EventHandler<Type> listenerCallback);
+        //void RegisterOnModuleAddedListener(EventHandler<Type> listenerCallback);
     }
 }

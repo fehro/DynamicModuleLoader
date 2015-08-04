@@ -9,5 +9,9 @@ namespace DynamicModuleLoader.SampleModules
 {
     public class MySecondTestModule: IModule
     {
+        public void Tick()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

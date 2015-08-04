@@ -10,7 +10,7 @@ namespace DynamicModuleLoader.Console
 
         static void Main(string[] args)
         {
-            var moduleManager = new DynamicModuleLoader.Core.ModuleManager(ModulesFolder, ModulesFileExtension, new Logger());
+            var moduleManager = new DynamicModuleLoader.Core.AssemblyManager(ModulesFolder, ModulesFileExtension, new Logger());
 
             moduleManager.RegisterOnModuleAddedListener(TestListener);
 
@@ -21,7 +21,7 @@ namespace DynamicModuleLoader.Console
             System.Console.ReadLine();
         }
 
-        public static void TestListener(Object sender, Type type)
+        public static void TestListener(Type type)
         {
 
             System.Console.WriteLine("Callback 1 " + type.Name);

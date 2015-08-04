@@ -42,6 +42,9 @@
     <Compile Include="Attributes\ModuleControl.cs" />
     <Compile Include="Contracts\ILogger.cs" />
     <Compile Include="Contracts\IModule.cs" />
+    <Compile Include="Delegates\Event.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="Infrastructure\LoggableClass.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

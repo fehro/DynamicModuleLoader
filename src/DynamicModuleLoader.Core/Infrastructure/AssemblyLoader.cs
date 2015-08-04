@@ -12,10 +12,10 @@ namespace DynamicModuleLoader.Core.Infrastructure
         /// <summary>
         /// Load the class types in the assembly with the provided file name that implement the generic interface.
         /// </summary>
-        public static List<Type> LoadAssemblyClasses<TInterface>(FileSystemInfo fileInfo)
+        public static List<Type> LoadAssemblyClasses<TInterface>(string fileName)
         {
             //Load the assembly.
-            var assembly = Assembly.LoadFrom(fileInfo.Name);
+            var assembly = Assembly.LoadFrom(fileName);
 
             //Return the implementing class types from the assembly.
             return GetInstantiatingClassesFromAssembly<TInterface>(assembly);

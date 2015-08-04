@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -39,14 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssemblyManager.cs" />
+    <Compile Include="Contracts\IAssemblyManager.cs" />
     <Compile Include="Contracts\ILoadedAssembly.cs" />
-    <Compile Include="Contracts\IModuleManager.cs" />
-    <Compile Include="Infrastructure\AssemblyManager.cs" />
     <Compile Include="Infrastructure\DirectoryScanner.cs" />
     <Compile Include="Infrastructure\EventEmitter.cs" />
+    <Compile Include="Infrastructure\ModuleManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Models\LoadedAssembly.cs" />
     <Compile Include="Infrastructure\AssemblyLoader.cs" />
-    <Compile Include="ModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
