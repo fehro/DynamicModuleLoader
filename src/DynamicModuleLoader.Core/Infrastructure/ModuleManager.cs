@@ -1,6 +1,5 @@
 ﻿using System;
 using DynamicModuleLoader.Common.Contracts;
-using DynamicModuleLoader.Common.Delegates;
 using DynamicModuleLoader.Common.Infrastructure;
 using DynamicModuleLoader.Core.Contracts;
 
@@ -39,7 +38,7 @@ namespace DynamicModuleLoader.Core.Infrastructure
                 //There were no module types found in the assembly.
 
                 //Write to the log.
-                base.LogEvent(string.Format("No modules found in assembly {0}", assembly.FileName));
+                base.LogEvent("ModuleManager", string.Format("No modules found in assembly {0}", assembly.FileName));
 
                 return;
             }
@@ -52,12 +51,12 @@ namespace DynamicModuleLoader.Core.Infrastructure
                     AddModuleToAssembly(ref assembly, moduleType);
 
                     //Write to the log.
-                    base.LogEvent(string.Format("Module {0} has been loaded from assembly {1}", moduleType.Name, assembly.FileName));
+                    base.LogEvent("ModuleManager", string.Format("Module {0} has been loaded from assembly {1}", moduleType.Name, assembly.FileName));
                 }
                 catch (Exception ex)
                 {
                     //Write to the log.
-                    base.LogEvent(string.Format("Exception whilst loading module {0} from assembly {1}", moduleType.Name, assembly.FileName));
+                    base.LogEvent("ModuleManager", string.Format("Exception whilst loading module {0} from assembly {1}", moduleType.Name, assembly.FileName));
                 }
             }
         }

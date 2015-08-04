@@ -87,7 +87,7 @@ namespace DynamicModuleLoader.Core
             if (!HasAssemblyBeenLoaded(fileInfo.Name))
             {
                 //Write to the log.
-                base.LogEvent(string.Format("Found new assembly {0}", fileInfo.Name));
+                base.LogEvent("AssemblyManager", string.Format("Found new assembly {0}", fileInfo.Name));
 
                 //Load the assembly.
                 LoadAssembly(fileInfo.Name);
@@ -117,7 +117,7 @@ namespace DynamicModuleLoader.Core
             catch (Exception ex)
             {
                 //Write to the log.
-                base.LogEvent(string.Format("Exception whilst loading assembly {0}", fileName));
+                base.LogEvent("AssemblyManager", string.Format("Exception whilst loading assembly {0}", fileName));
             }
         }
 

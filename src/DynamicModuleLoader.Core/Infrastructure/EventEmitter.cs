@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using DynamicModuleLoader.Common.Delegates;
+﻿using DynamicModuleLoader.Common.Delegates;
 
 namespace DynamicModuleLoader.Core.Infrastructure
 {

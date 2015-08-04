@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using DynamicModuleLoader.Common.Contracts;
+﻿using DynamicModuleLoader.Common.Contracts;
 
 namespace DynamicModuleLoader.Common.Infrastructure
 {
@@ -11,7 +6,7 @@ namespace DynamicModuleLoader.Common.Infrastructure
     {
         #region Global Variables / Properties
 
-        private readonly ILogger _logger;
+        protected ILogger Logger { get; private set; }
 
         #endregion
 
@@ -19,7 +14,7 @@ namespace DynamicModuleLoader.Common.Infrastructure
 
         public LoggableClass(ILogger logger)
         {
-            _logger = logger;
+            Logger = logger;
         }
 
         #endregion
@@ -29,12 +24,12 @@ namespace DynamicModuleLoader.Common.Infrastructure
         /// <summary>
         /// Log an event to the logger.
         /// </summary>
-        protected void LogEvent(string value)
+        protected void LogEvent(string component, string value)
         {
             //If there is no logger then just return.
-            if (_logger == null) return;
+            if (Logger == null) return;
 
-            _logger.LogEvent(value);
+            Logger.LogEvent(string.Format("[{0}] {1}", component, value));
         }
 
         #endregion
