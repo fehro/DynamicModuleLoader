@@ -1,4 +1,5 @@
 ﻿using System;
+using DynamicModuleLoader.Common.Delegates;
 
 namespace DynamicModuleLoader.Core.Contracts
 {
@@ -8,6 +9,6 @@ namespace DynamicModuleLoader.Core.Contracts
 
         void Stop();
 
-        //void RegisterOnModuleAddedListener(EventHandler<Type> listenerCallback);
+        void RegisterOnModuleAddedListener(Event<Type> listener);
     }
 }
